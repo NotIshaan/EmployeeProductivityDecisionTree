@@ -3,20 +3,35 @@
 ## Overview
 This repository contains Python code for predicting employee productivity in the garment industry using machine learning techniques, specifically decision trees and random forests. The project aims to assist garment manufacturing companies in tracking, analyzing, and predicting the productivity performance of their working teams.
 
-## Dataset
-The dataset used in this project is a modified version of the [Productivity Prediction of Garment Employees Dataset](https://archive.ics.uci.edu/dataset/597/productivity+prediction+of+garment+employees). It includes various features such as date, day, quarter, department, team, number of workers, standard minute value (SMV), overtime, incentive, targeted productivity, actual productivity, and more.
+## Changes in Modified Code:
 
-## Key Features
-- **Data loading and preprocessing:** The code handles missing values, cleans the dataset by fixing misspelled entries and removing unnecessary columns, and converts categorical variables into numerical ones.
-- **Model building:** It builds a decision tree classifier to predict employee productivity based on features such as incentive, number of workers, SMV, and more.
-- **Model evaluation:** The code evaluates the model's performance using cross-validation, confusion matrix, classification report, and feature importance analysis.
-- **Random Forest:** In addition to decision trees, the code also implements a random forest classifier to mitigate overfitting and improve model performance.
+1. **Data Cleaning**:
+   - Corrected misspellings in the "department" column.
+   - Concatenated "finishing" department entries.
+   - Merged "Quarter5" with "Quarter4".
+   - Converted categorical values in "quarter" column to integers.
+   - Converted "no_of_workers" column from float to integer.
+   - Rounded "actual_productivity" column to two decimal places.
+   - Removed irrelevant columns ("date", "wip", "idle_time", "idle_men", "no_of_style_change").
 
-## Usage
-1. Clone the repository: `git clone https://github.com/yourusername/employee-productivity-prediction.git`
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Run the Jupyter Notebook or Python script to execute the code.
-4. Explore the results, including model accuracy, confusion matrix, feature importance, and more.
+2. **Data Transformation**:
+   - Replaced categorical values in "department" column with binary integers.
+   - One-hot encoded categorical columns using `OneHotEncoder` and `make_column_transformer`.
+   - Created polynomial features for selected columns.
+
+3. **Model Building**:
+   - Used DecisionTreeClassifier with specified parameters.
+   - Conducted cross-validation with 10 folds.
+   - Utilized RandomForestClassifier to double-check decision tree performance.
+
+4. **Evaluation**:
+   - Visualized decision tree using `plot_tree`.
+   - Evaluated model using confusion matrix, classification report, and feature importance analysis.
+   - Explained decision tree's structure and predictions.
+
+5. **Conclusion**:
+   - Summarized project steps and findings, emphasizing model accuracy and potential impact.
+
 
 ## Contributors
 - Ishaan Bhadrike(https://github.com/NotIshaan): Project lead, data preprocessing, model building, and evaluation.
