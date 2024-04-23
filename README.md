@@ -19,8 +19,7 @@ The dataset used in this project is a modified version of the [Productivity Pred
 4. Explore the results, including model accuracy, confusion matrix, feature importance, and more.
 
 ## Contributors
-- [Your Name](https://github.com/yourusername): Project lead, data preprocessing, model building, and evaluation.
-- [Collaborator Name](https://github.com/collaboratorusername): Data analysis, visualization, and documentation.
+- Ishaan Bhadrike(https://github.com/NotIshaan): Project lead, data preprocessing, model building, and evaluation.
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
